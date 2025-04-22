@@ -1,0 +1,21 @@
+{
+  "name": "gh-shh",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "single:shh": "node scripts/hideRecentRepo.js",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^21.1.1",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
