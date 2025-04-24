@@ -1,0 +1,21 @@
+name: 'Set `private` visibility on last updated repo'
+
+on:
+  # allows option to trigger workflow manually
+  workflow_dispatch:
+  
+  # TODO: add scheduled execution
+  # schedule:
+  #   - cron: '0 * * * *' # runs hourly
+
+env:
+  GH_USERNAME: ${{ secrets.GH_USERNAME }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  EXCLUDED_REPO: ${{ secrets.EXCLUDED_REPO }}
+jobs:
+  script:
+    name: Run npm script
+    runs-on: ubuntu-latest
+    steps:
+    - name: Hide single repo
+      run: npm run single:shh  
