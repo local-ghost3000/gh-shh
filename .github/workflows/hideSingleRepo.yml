@@ -17,5 +17,6 @@ jobs:
     name: Run npm script
     runs-on: ubuntu-latest
     steps:
-    - name: Hide single repo
-      run: npm run single:shh  
+      - uses: actions/checkout@v4
+      - name: Hide single repo
+        run: npm run single:shh  
